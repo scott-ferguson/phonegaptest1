@@ -1,0 +1,13 @@
+.fund-box, body .selection-info.user, #selected-fund-details .projections-panel, body .hidden-element {
+	display: none;
+}
+
+.chart-bar {
+	display: inline-block;
+	width: 69px;
+	height: 69px;
+}
+
+[id^='cq-'] .fund-box, [id^='cq-'] .selection-info.user, [id^='cq-'] #selected-fund-details .projections-panel {
+	display: block;
+}
