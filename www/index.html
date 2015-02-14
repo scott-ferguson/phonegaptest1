@@ -1,17 +1,704 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=0.75, maximum-scale=1, minimum-scale=0.75, width=device-width, height=device-height, target-density-dpi=medium-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/bootstrap-rr.css" />
-        <link rel="stylesheet" type="text/css" href="css/responsive-rr.css" />
-        <link rel="stylesheet" type="text/css" href="css/fundprojectionpage.css" />
-        <link rel="stylesheet" type="text/css" href="js/modernizr.custom.min.js" />
-        <title>Retiready</title>
-    </head>
-    <body>
-        <iframe style="width: 100%; height: 100%" src="http://retiready.co.uk/retiready.html"></iframe>
-    </body>
-</html>
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <meta charset="utf-8" />
+                <meta name="format-detection" content="telephone=no" />
+                <meta name="msapplication-tap-highlight" content="no" />
+                <meta name="viewport" content="user-scalable=no, initial-scale=0.75, maximum-scale=1, minimum-scale=0.75, width=device-width, height=device-height, target-density-dpi=medium-dpi" />
+                <link rel="stylesheet" type="text/css" href="css/bootstrap-rr.css" />
+                <link rel="stylesheet" type="text/css" href="css/responsive-rr.css" />
+                <link rel="stylesheet" type="text/css" href="css/fundprojectionpage.css" />
+                <link rel="stylesheet" type="text/css" href="js/modernizr.custom.min.js" />
+                <title>Retiready</title>
+            </head>
+            <body>
+    <!-- Main menu overlay  -->
+    <div id="overlay" style="display:none" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+            <div data-component="navigation">
+                <div id="full-width-header">
+                    <div class="container page-retiready">     
+                        <div class="logo ">                                                                           
+                                        <a class="brand pull-left" href="/retiready.html">
+                                            <img src="img/retire-ready-logo.svg" alt="Retiready">
+                                        </a>                                                            
+                        </div>
+                        <div id="nav" class="navigation ">
+                            <div class="module-nav">
+                                <nav>
+                                    <ul>
+                                                    <li class="home">
+                                                        <a href="/retiready.html">
+                                                            <span class="screenreader-visible"> - Home</span>
+                                                            <span aria-hidden="true" class="ico">&#xf71b;</span>
+                                                            Home
+                                                        </a>
+                                                    </li>
+                                                    <li class="goals">
+                                                        <a href="/public/goals.html">
+                                                            <span class="screenreader-visible"> - Goals</span>
+                                                            <span aria-hidden="true" class="ico">&#xf727;</span>
+                                                            Goals
+                                                        </a>
+                                                    </li>
+                                                    <li class="shop">
+                                                        <a href="/public/shop.html">
+                                                            <span class="screenreader-visible"> - Shop</span>
+                                                            <span aria-hidden="true" class="ico">&#xf705;</span>
+                                                            Shop
+                                                        </a>
+                                                    </li>
+                                                    <li class="savings">
+                                                        <a href="/public/savings.html">
+                                                            <span class="screenreader-visible"> - Savings</span>
+                                                            <span aria-hidden="true" class="ico">&#xf703;</span>
+                                                            Savings
+                                                        </a>
+                                                    </li>
+                                                    <li class="coach">
+                                                        <a href="/public/coach.html">
+                                                            <span class="screenreader-visible"> - Coach</span>
+                                                            <span aria-hidden="true" class="ico">&#xf700;</span>
+                                                            Coach
+                                                        </a>
+                                                    </li>
+                                                    <li class="support">
+                                                        <a href="/public/support.html">
+                                                            <span class="screenreader-visible"> - Support</span>
+                                                            <span aria-hidden="true" class="ico">&#xf702;</span>
+                                                            Support
+                                                        </a>
+                                                    </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="dropdown ">
+                            <div class="options">
+                                        <a href="/public/sign-in.html" class="btn btn-link" title="link to sign in">Sign In</a>
+                                <button class="ico" title="Open Main menu" id='openBtn' aria-hidden="false">
+                                    <span>Menu</span><span aria-hidden="true">&#xf718;</span>
+                                </button>
+                            </div>
+                            <div class="element">
+                                <div class="static" tabindex="-1">
+                                    <a href="#" id="topLink" class="btn btn-link">
+                                        <span aria-hidden="true" class="ico">&#xf701;</span>
+                                        <span class="txt" id="flyoutUsername">
+                                                Sign In                           
+                                        </span>
+                                    </a>
+                                    <button class="ico" title=" Close Main menu" id='closeBtn' aria-hidden="false">
+                                        <span>Menu</span><span aria-hidden="true">&#xf718;</span>
+                                    </button>
+                                </div>
+                                <div id="menu-scroll-links"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: none">
+                    <div id="navigation" role="navigation">
+                        <nav>
+                            <ul>
+                                            <li class="home">
+                                                <a href="/retiready.html">
+                                                    <span class="screenreader-visible"> - Home</span>
+                                                    <span aria-hidden="true" class="ico">&#xf71b;</span>
+                                                    <span class="txt" data-icon="&#xf719;">Home</span>
+                                                </a>
+                                                
+                                            </li>
+                                            <li class="goals">
+                                                <a href="/public/goals.html">
+                                                    <span class="screenreader-visible"> - Goals</span>
+                                                    <span aria-hidden="true" class="ico">&#xf727;</span>
+                                                    <span class="txt" data-icon="&#xf719;">Goals</span>
+                                                </a>
+                                                
+                                            </li>
+                                            <li class="shop">
+                                                <a href="/public/shop.html">
+                                                    <span class="screenreader-visible"> - Shop</span>
+                                                    <span aria-hidden="true" class="ico">&#xf705;</span>
+                                                    <span class="txt" data-icon="&#xf719;">Shop</span>
+                                                </a>
+                                                
+                                                    <ul>
+                                                                    <li><a href="/public/shop/retiready-isa.html">Retiready ISA</a></li>
+                                                                    <li><a href="/public/shop/retiready-pension.html">Retiready Pension</a></li>
+                                                                    <li><a href="/public/shop/about-investment-funds.html">Investment options</a></li>
+                                                    </ul>
+                                            </li>
+                                            <li class="savings">
+                                                <a href="/public/savings.html">
+                                                    <span class="screenreader-visible"> - Savings</span>
+                                                    <span aria-hidden="true" class="ico">&#xf703;</span>
+                                                    <span class="txt" data-icon="&#xf719;">Savings</span>
+                                                </a>
+                                                    <ul>
+                                                    </ul>
+                                            </li>
+                                            <li class="coach">
+                                                <a href="/public/coach.html">
+                                                    <span class="screenreader-visible"> - Coach</span>
+                                                    <span aria-hidden="true" class="ico">&#xf700;</span>
+                                                    <span class="txt" data-icon="&#xf719;">Coach</span>
+                                                </a>
+                                                    <ul>
+                                                                    <li><a href="/public/coach/insights.html">Insights</a></li>
+                                                    </ul>
+                                            </li>
+                                            <li class="support">
+                                                <a href="/public/support.html">
+                                                    <span class="screenreader-visible"> - Support</span>
+                                                    <span aria-hidden="true" class="ico">&#xf702;</span>
+                                                    <span class="txt" data-icon="&#xf719;">Support</span>
+                                                </a>
+                                                    <ul>
+                                                                    <li><a href="/public/support/faq.html">Frequently asked questions</a></li>
+                                                                    <li><a href="/public/contact-us.html">Contact us</a></li>
+                                                                    <li><a href="/public/support/faq/misc/misc/about.html">About Retiready</a></li>
+                                                                    <li><a href="/public/support/faq/misc/misc/legal.html">Legal</a></li>
+                                                                    <li><a href="/public/support/faq/misc/misc/accessibility.html">Accessibility</a></li>
+                                                                    <li><a href="/public/support/faq/misc/misc/regulatory.html">Regulatory info</a></li>
+                                                                    <li><a href="/public/support/faq/misc/misc/cookies.html">Privacy and cookies</a></li>
+                                                    </ul>
+                                            </li>
+                            </ul>
+                            <div class="height-spacer"></div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+    <div class="section"><div class="new"></div>
+    </div><div class="parsys iparsys header-iparsys">
+    </div>
+
+    <!-- Main menu overlay  -->
+    <!--  <div id="overlay" style="display:none" aria-hidden="true"></div> -->
+
+    <!---->
+    <div class="header-background">
+        <div class="container">        
+
+    <div id="prechat" class="clearfix">
+        <div class="prechat-inner" tabindex="-1" role="dialog">
+            <div class="modal-header clearfix">
+                <h2 class="help-modal-title" id="prechat-title">Chat with Retiready</h2>
+                <button type="button" class="btn close" data-dismiss="modal" id="close-prechat-form">
+                    <span aria-hidden="false">Close</span><span class="ico" aria-hidden="true">&#xf706;</span>
+                </button>
+            </div>
+            <div class="modal-body clearfix">
+                <form method='post' id='prechatForm' name='prechat-form' autocomplete="off"> 
+                    <div class="control-group name">
+                        <span class="help-inline always-in controls" aria-hidden="false">
+                            <span class="ico" aria-hidden="true">&#xf70e;</span>
+                        </span>
+
+                        <label for="liveagent.prechat.name">Name</label>
+
+                        <div class="controls">
+                            <input type="text" id="liveagent.prechat.name" name="liveagent.prechat.name" maxlength="128" data-maxlength="128" required="required" class="hide">
+                        </div>
+                    </div>
+
+                    <div class="control-group email">
+                        <span class="help-inline always-in controls" aria-hidden="false">
+                            <span class="ico" aria-hidden="true">&#xf70e;</span>
+                        </span>
+
+                        <label for="liveagent.prechat.email">Email</label>
+
+                        <div class="controls">
+                            <input type="email" id="liveagent.prechat.email" name="liveagent.prechat.email" maxlength="129" data-maxlength="129" required="required" class="hide">
+                        </div>
+                    
+                    </div>
+    <div class="control-group">
+        <span class="help-inline always-in controls" aria-hidden="false"> 
+           <span class="ico" aria-hidden="true">&#xf70e;</span> 
+        </span>
+        
+        <label for="type">Please select a category</label>
+        
+        <div class="controls">
+            <select id="type" name="type"
+             data-required="true" 
+            class="form-dropdown" data-trigger="submit" data-error-message="Please select a valid category">
+                <option value="">Please Select</option>
+                <option value="Retiready">Retiready</option><option value="Products">Products</option><option value="Technical">Technical</option><option value="Suggest an idea">Suggest an idea</option><option value="Other">Other</option>
+            </select>             
+        </div>
+    </div>
+    <div class="control-group">
+        <span class="help-inline always-in controls" aria-hidden="false"> 
+           <span class="ico" aria-hidden="true">&#xf70e;</span> 
+        </span>
+        
+        <label for="rr_topic__c">What feature specifically is causing you trouble?</label>
+        
+        <div class="controls">
+            <select id="rr_topic__c" name="rr_Topic__c"
+             data-required="true"  
+            class="form-dropdown" data-trigger="submit" data-error-message="Please select a valid subcategory">
+                <option value="">Please Select</option>
+                <option value="Score">Score</option><option value="Lifestyle Planner">Lifestyle planner</option><option value="Servicing">Servicing</option><option value="Information Request">Information request</option><option value="Website">Website</option><option value="idea">Idea</option><option value="Other">Other</option>
+            </select>             
+        </div>
+    </div>
+    <div class="control-group">
+        <span class="help-inline always-in controls" aria-hidden="false"> 
+           <span class="ico" aria-hidden="true">&#xf70e;</span> 
+        </span>
+        
+        <label for="relationship">Relationship List (Hidden)</label>
+        
+        <div class="controls">
+            <select id="relationship" name="relationship"
+             >
+                <option value="">Please Select</option>
+                <option value="Score">Retiready</option><option value="Lifestyle Planner">Retiready</option><option value="Servicing">Products</option><option value="Information Request">Products</option><option value="Website">Technical</option><option value="idea">Suggest an idea</option><option value="Other">Technical</option>
+            </select>                 
+        </div>
+    </div>
+
+                    <button type="submit" id="liveagent_button_online_" class="btn btn-block-responsive btn-primary">Request Chat</button>
+                    <div id="liveagent_button_offline_" style="display: none;">Chat is Offline</div> 
+
+                    <p class="webchat-disclaimer margin-top">Disclaimer: We will monitor web chat for your security and our training purposes.</p>
+
+                    <a class="webchat-issue margin-top" target="_blank" href="/public/support/faq/getting-in-touch/contact/why-isn-t-web-chat-working-on-my-iphone-or-ipad.html">Webchat not opening?</a>
+                </form>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+
+    <!-- End of  Header -->
+
+    <!-- Homepage-########-RR-#### START (RM) -->
+    <section id="content"
+        class="fixed-header-height homepage section-default"
+        aria-hidden="true">
+        <!--  Apply homepage type class:
+                    - 'homepage'
+                    - 'homepage-logged-in'
+
+                  Apply section colour class:
+                    - 'section-default'
+                    - 'section-goals'
+                    - 'section-shop'
+                    - 'section-savings'
+                    - 'section-coach'
+                    - 'section-support'
+            -->
+    <div id="rulesBasedWebchat" data-component="rulesBasedWebchat" data-time="45" data-origins=""
+        data-primary-category="Retiready" data-subcategory="Website">
+        <div id="opening_times" data-sat-start="10:00 AM" data-sat-end="4:00 PM" data-sun-start="10:00 AM"  data-sun-end="2:00 PM" data-week-start="8:00 AM" data-week-end="8:00 PM"></div>
+    </div>
+        <!-- Hero panel START -->
+            <div class="hero" data-component="heroBanner" data-slider-delay="" data-slider-background="">
+              <div class="container">
+                  <header class="panel">
+                    <div class="hero-top">
+                    <div class="hero-left-wrapper absolute-vertical-center-desktop">
+                      <div class="hero-content ">
+                        <h1 class="main-header ">
+                                Get on track for retirement                         
+                        </h1>
+                            <p>Retiready is a FREE retirement planning tool. Get started today by getting your Retiready Score
+    </p>
+                      </div>
+                    </div><!-- /hero-left-wrapper -->
+                      <!-- slide block -->
+                      <!-- end of slide block -->
+                            <!-- video block -->
+                            <a class="hero-video" href="#videoModal" role="button" data-toggle="modal" title="Select to view video">
+                              <img width="282" height="152" src="img/thumb_Retiready flythrough.png" alt="Things to think about">
+                              <p aria-hidden="false">Take a tour of  Retiready <span class="screenreader-visible">video (Opens in a new layer)</span></p>
+                            </a>
+                            <iframe name="hero-iframe-video" title="Retiready Promotional Video" class="hero-video" src="//player.vimeo.com/video/91943319" width="282" height="152" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>           
+                    </div>
+                    <div class="hero-actions">
+                      <a class="btn btn-secondary btn-large" href="/session/goals/get-score.html">
+                        <span>Get your Retiready Score</span>
+                        
+                          <span class="screenreader-visible">Get your retire ready score</span>
+                          
+                        <span aria-hidden="true" class="ico">&#xf719;</span>
+                      </a>               
+                    </div>
+                  </header>
+              </div>
+            </div>
+        <!-- Hero panel END -->
+
+        <div class="container">
+            <div class="row-fluid">
+
+                <!-- Page h2 title and descreat sign in START -->
+                <!-- These are repeated from hero panel. Have option to add additional text above button(s) -->
+                   <p>Already a Retiready customer?  <a href="/public/sign-in.html"><span>Sign in</span> <span class="ico" aria-hidden="true">&#xf719;</span></a></p>
+    <div  
+        >
+            <H2>Here's how Retiready can help you</H2>
+
+    </div>
+                <!-- Feature boxes START -->
+                    <div class="feature-box-container">
+                        <div class="feature-column">
+                    <div
+                        class="panel feature-box feature-double-height feature-pastel-green">
+                                <div class="visual-wrapper-img">
+                                    <img src="img/feature-box-isa-promo-2015.png" alt=""/>
+                                </div>
+                            
+                        <h3>It's ISA sale time</h3>
+                        <p>For new Retiready customers, there’s no service charge for the life of your Retiready ISA on investments up to £50,000. Apply before midnight on 5 April 2015</p> <p>Terms and conditions apply</p>
+                            <div class="link-wrapper js-button">
+                                <a class="btn btn-secondary btn-large btn-block" href="/public/shop/retiready-isa.html"> <span>Get started <span class="screenreader-visible">and get no service charge on the Retire ready ISA</span></span>
+                                    <span class="ico" aria-hidden="true">&#xf719;</span>
+                                </a>
+                            </div>
+                    </div>
+                    <!-- /feature-box -->
+                        </div>
+                        <!-- /feature-column -->
+                        <div class="feature-column">
+                    <div
+                        class="panel feature-box feature-double-height feature-pastel-light-green">
+                                <div class="visual-wrapper-img">
+                                    <img src="img/feature-box-pension-promo-2015.png" alt=""/>
+                                </div>
+                            
+                        <h3>Get an iPad mini 2</h3>
+                        <p>Get an iPad mini 2 when you transfer £30,000 or more of new investments to a Retiready pension by 31 March 2015.</p><p>Terms and conditions apply</p>
+                            <div class="link-wrapper js-button">
+                                <a class="btn btn-secondary btn-large btn-block" href="/public/shop/retiready-pension.html"> <span>Find out more <span class="screenreader-visible">about our Pension iPad offer</span></span>
+                                    <span class="ico" aria-hidden="true">&#xf719;</span>
+                                </a>
+                            </div>
+                    </div>
+                    <!-- /feature-box -->
+                        </div>
+                        <!-- /feature-column -->
+                        <div class="feature-column">
+                    <div
+                        class="panel feature-box feature-double-height feature-light-blue">
+                            
+                                <div class="visual-wrapper-ico">
+                                    <span class="ico" aria-hidden="true">&#xf700</span>
+                                </div>
+                        <h3>Are you on track?</h3>
+                        <p>Your Retiready Score is a great way to find out how ready you are for the retirement you want.</p><p>Your Score is FREE. Just answer a few simple questions to get started.</p>
+                            <div class="link-wrapper js-button">
+                                <a class="btn btn-secondary btn-large btn-block" href="/session/goals/get-score.html"> <span>Get your Score <span class="screenreader-visible"></span></span>
+                                    <span class="ico" aria-hidden="true">&#xf719;</span>
+                                </a>
+                            </div>
+                    </div>
+                    <!-- /feature-box -->
+                        </div>
+                        <!-- /feature-column -->
+                    </div>
+                    <!-- /feature-box-container -->
+                    <!-- Feature boxes END -->
+            <!-- Page actions START -->
+            <!-- These are repeated from hero panel. Have option to add additional text above button(s) -->
+            <div class="page-actions">
+            </div>
+            <!-- Page actions END -->
+            <!-- Add space START -->
+            <aside class="add-space">
+                <!-- /feature-box -->
+                    <div class="panel feature-box feature-orange">
+                        <div class="visual-wrapper-ico">
+                            <span class="ico" aria-hidden="true">&#xf70d;</span>
+                        </div>
+                        <div class="content">
+                            <h3>
+                                Sign up for Retiready
+                            </h3>
+                            <p>Sign up for FREE and create your Retiready dashboard and manage your pension online. Plus, you'll get full access to all our retirement planning tools. </p>
+                        </div>
+                        
+                        <div class="links-wrapper">
+                            <div class="link-container">
+                                <a href="/public/register.html" class="btn btn-secondary"> <span>Sign up today</span> 
+                                
+                                         <span class="screenreader-visible">to Retiready</span>
+                                    
+                                <span class="ico" aria-hidden="true">&#xf719;</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel feature-box feature-orange">
+                        <div class="visual-wrapper-ico">
+                            <span class="ico" aria-hidden="true">&#xf70d;</span>
+                        </div>
+                        <div class="content">
+                            <h3>
+                                Support when you need it
+                            </h3>
+                            <p>The Retiready team is on hand if you need anything.<br>You can chat to us online via Web Chat, send us an email or give us a call <b>08456 100 072</b></p>
+                        </div>
+                        
+                        <div class="links-wrapper">
+                            <div class="link-container">
+                                <a href="/public/support.html" class="btn btn-secondary"> <span>Get in touch</span> 
+                                
+                                         <span class="screenreader-visible">Get in touch with us</span>
+                                    
+                                <span class="ico" aria-hidden="true">&#xf719;</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                <!-- /feature-box -->
+
+            </aside>
+
+            <div class="page-actions">
+            </div>
+            <!-- Add space END -->
+        </div>
+        <!-- row-fluid -->
+        </div>
+        <!-- /container -->
+    </section>
+    <!-- Landing-page-########-RR-#### END (RM) -->
+    <div id="full-width-footer">
+        <div class="container">
+            <footer class="footer ">
+                <div class="footer-left">
+                    <div>
+                        <a class="aegon" href="http://www.aegon.co.uk"> from <!-- Modernizr Js detect no svg and replaces with png -->
+                            <img src="img/aegon-logo.svg" alt="Aegon">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-right">
+                    <nav>
+        <div id='footer-list-items'   >
+           <ul>
+                    <li  data-list-item="1">
+            © 2015 Aegon UK plc
+                    </li>
+                    <li  data-list-item="2">
+            <a href="/public/support/faq/misc/misc/regulatory.html">Regulatory information</a>
+                    </li>
+                    <li  data-list-item="3">
+            <a href="/public/support/faq/misc/misc/legal.html">Legal</a>
+                    </li>
+                    <li  data-list-item="4">
+            <a href="/public/support/faq/misc/misc/cookies.html">Privacy and Cookies</a>
+                    </li>
+                    <li  data-list-item="5">
+            <a href="/public/support/faq/misc/misc/accessibility.html">Accessibility</a>
+                    </li>
+            </ul>
+        </div>  
+                    </nav>
+                </div>
+
+                <div class="footer-statement clearfix pull-left">
+                    <span></span>
+                </div>
+
+            </footer>
+
+            <!-- /fixed-footer -->
+
+            <div class="fixed-footer-container">
+
+    <div id="cookie-statement"
+        class="span8 gutter1 background-flat-bottom cookie-close cookie-open hidden"
+        tabindex="-1" data-component="footerWarning"
+        data-cookie-warning-version="1"
+        data-browser-warning-version="{'ie':8,'iewp':9,'ff':4,'ffdroid':14,'chromedesktop':25,'chromeios':25,'chromedroid':25,'safari':6,'safariios':5}"
+        data-downtime-warning-version="3"
+        data-downtimeActive="false">
+        <div class="panel cookie-header background-flat-bottom">
+            <span class="ico ico-grande pull-left" aria-hidden="true">&#xf70e;</span>
+            <h3 id="warningSingle" class="pull-left hidden">Important message</h3>
+            <h3 id="warningMultiple" class="pull-left hidden">Important messages</h3>
+            <button id="cookie-statement-close-btn" class="btn close"
+                type="button" aria-hidden="false">
+                <span class="btn-cancel-icon ico" aria-hidden="true">&#xf706;</span><span
+                    class="hidden">Close cookies statement</span>
+            </button>
+        </div>
+        <div id="cookieWarning" class="panel hidden">
+            We use cookies to give you the best experience we can. If you continue, we'll assume you're happy to receive all cookies from the website. <a href="/public/support/faq/misc/misc/cookies.html">More about our cookies </a>
+        </div>
+        <div id="browserWarning" class="panel hidden">
+            <strong>Getting the best from Retiready</strong><br><br>We're sorry, but Retiready isn't supported by your current browser. It might function, but won't look like it would on a supported browser. We suggest you download a supported version of the browser to view Retiready.
+        </div>
+        <div id="downtimeWarning" class="panel hidden">
+            <strong>Retiready maintenance</strong><br/>
+        </div>
+    </div>
+            </div>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /full-width-footer -->
+
+    <div id="sessionExpiringModal" 
+        data-component="sessionExpiringModal"
+
+          class="modal hide fade" tabindex="-1" role="dialog">
+
+      <div class="modal-header clearfix">
+        <h2 class="help-modal-title">Timeout warning</h2>
+        <button type="button" class="btn close" data-dismiss="modal">
+          <span aria-hidden="false">Close Window</span>
+          <span class="ico" aria-hidden="true">&#xf706;</span>
+        </button>
+      </div>
+      <div class="help-modal-body modal-body clearfix">
+
+                    This page has been inactive for a while. For security reasons, it will time out in {{timer}} minutes if you don't do anything. 
+     
+        <div class="panel form-actions">
+          <!-- footer buttons used for actions like 'Yes/No' and 'Confirm' etc-->
+          <div class="actions-primary clearfix">
+            <button class="modal-action-button btn btn-block-responsive btn-large btn-primary actionButton" data-id="submit" data-dismiss="modal" aria-hidden="true" 
+              >
+                Refresh Session
+            </button>
+          </div>  
+        </div>
+      </div>
+    </div>
+
+    <div id="serverErrorModal" 
+
+      
+        data-component="serverErrorModal"
+          class="modal hide fade" tabindex="-1" role="dialog">
+
+      <div class="modal-header clearfix">
+        <h2 class="help-modal-title">Server Error</h2>
+        <button type="button" class="btn close" data-dismiss="modal">
+          <span aria-hidden="false">Close Window</span>
+          <span class="ico" aria-hidden="true">&#xf706;</span>
+        </button>
+      </div>
+      <div class="help-modal-body modal-body clearfix">
+      
+                    Internal server error. Please try again shortly
+
+        <div class="panel form-actions">
+          <!-- footer buttons used for actions like 'Yes/No' and 'Confirm' etc-->
+          
+          <div class="actions-primary clearfix">
+            <button class="modal-action-button btn btn-block-responsive btn-large btn-primary actionButton" data-id="submit" data-dismiss="modal" aria-hidden="true" 
+              
+              
+              >
+                Dismiss
+                
+            </button>
+          </div>  
+           
+          
+        </div>
+      
+      </div>
+    </div>
+
+    <div id="webchatPromptModal" 
+        data-component="webchatPromptModal"
+          class="modal hide fade" tabindex="-1" role="dialog">
+      
+      <div class="modal-header clearfix">
+        <h2 class="help-modal-title">Need to chat?</h2>
+        <button type="button" class="btn close" data-dismiss="modal">
+          <span aria-hidden="false">Close Window</span>
+          <span class="ico" aria-hidden="true">&#xf706;</span>
+        </button>
+      </div>
+      <div class="help-modal-body modal-body clearfix">
+      
+                 <h4  class="without-name" > 
+                    Need some help with this section of Retiready?
+                 </h4>          
+                 <h4  class="with-name" > 
+                    Need some help with this section of Retiready {{name}}?
+                 </h4>          
+
+                 <p  class="text" > 
+                    Chat online with one of our operators
+                 </p>           
+    <div class="control-group "> 
+        <div class="controls ">
+           <label class="label_check " for="dontPromptAgain">
+             <input type="checkbox" id="dontPromptAgain" name="dontPromptAgain" value="dontPromptAgain"   
+                />   
+             Don't ask me again</label>
+        </div>
+    </div>
+        <div class="panel form-actions">
+          <!-- footer buttons used for actions like 'Yes/No' and 'Confirm' etc-->
+          
+          <div class="actions-primary clearfix">
+            <button class="modal-action-button btn btn-block-responsive btn-large btn-primary actionButton" data-id="submit" data-dismiss="modal" aria-hidden="true" 
+              >
+                Connect me    
+            </button>
+          </div>  
+          <div class="actions-secondary clearfix">
+            
+              <button class="modal-cancel-button btn btn-link cancelButton" data-id="cancel" data-dismiss="modal" aria-hidden="false" >
+                No thanks
+                
+              </button>
+            
+          </div>
+          
+        </div>
+      
+      </div>
+    </div><div class="section"></div><div class="iparys_inherited">
+    </div>
+
+    <div id="help-modal" class="modal hide fade" tabindex="-1" role="dialog">
+      <div class="modal-header clearfix">
+        <h2 class="help-modal-title">Modal header</h2>
+        <button type="button" class="btn close" data-dismiss="modal">
+          <span aria-hidden="false">Close this layer</span>
+          <span class="ico" aria-hidden="true">&#xf706;</span>
+        </button>
+      </div>
+      <div class="help-modal-body modal-body clearfix">
+        <p>
+          Lorem ipsum dolor.
+        </p>
+        <div class="panel form-actions">
+        </div>
+      </div>
+    </div>
+    <div id="videoModal" 
+        data-component="videoModal"
+          class="modal modal-video hide fade" tabindex="-1" role="dialog">
+      
+      <div class="modal-header clearfix">
+        <h2 class="help-modal-title">The future is in your hands</h2>
+        <button type="button" class="btn close" data-dismiss="modal">
+          <span aria-hidden="false">Close Window</span>
+          <span class="ico" aria-hidden="true">&#xf706;</span>
+        </button>
+      </div>
+      <div class="help-modal-body modal-body clearfix">
+      </div>
+    </div>
+    <script type="text/javascript" src="js/clientlibs.min.js"></script>
+        </body>
+        </html>
